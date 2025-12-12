@@ -5,13 +5,15 @@
   --foreground: #171717;
 }
 
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-segoe-ui: 'SegoeUI', sans-serif;
+  --font-segoe-ui-bold: 'SegoeUIBold', sans-serif;
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +21,44 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* .container{
+  max-width: 1350px;
+  margin: 0px auto;
+  padding: 0 15px;
+} */
+
+.container{
+  max-width: 1400px;
+  margin: 0px auto;
+  padding: 0 15px;
 }
+
+button, a{
+  cursor: pointer;
+}
+
+
+@font-face {
+  font-family: "SegoeUI";
+  src: url("/fonts/SegoeUI/segoeuithis.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SegoeUIBold";
+  src: url("/fonts/SegoeUI/segoeuithibd.ttf") format("truetype");
+  font-style: 700;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family: "SegoeUI";
+  src: url("/fonts/SegoeUI/segoeuithisi.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SegoeUI";
+  src: url("/fonts/SegoeUI/segoeuithisz.ttf") format("truetype");
+  font-display: swap;
+} */
