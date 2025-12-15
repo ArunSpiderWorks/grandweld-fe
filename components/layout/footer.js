@@ -19,7 +19,7 @@ const Footer = ({ data }) => {
     <>
       <footer
         id="footer-section"
-        className="border-t border-[#AFAFAF] mt-[60px] border-b pb-[8px]"
+        className=" border-[#AFAFAF] mt-[60px] border-b pb-[8px]"
       >
         <div className="container">
           <div className="flex justify-between flex-wrap">

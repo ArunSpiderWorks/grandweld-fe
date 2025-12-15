@@ -7,6 +7,10 @@ export default function ContactForm({}) {
   return (
     <form className="form bg-[#ffffff6e] py-[40px] px-[20px] rounded-[15px]">
       <div className="w-full ">
+        <h2 className="text-[#000] font-segoe-ui lg:text-[40px] text-[30px] font-[400] lg:leading-[45px] leading-[35px] tracking-[-0.64px] mt-[15px] mb-[20px]">
+          World-Class <strong>Shipbuilding & Ship Repair</strong> Services in
+          Dubai
+        </h2>
         <div className="input-block mb-[25px]">
           <input
             type="text"
@@ -42,8 +46,12 @@ export default function ContactForm({}) {
             <option value="" disabled>
               Service Required
             </option>
-            <option value="Ship Repair" className="text-[#000]">Ship Repair</option>
-            <option value="Ship Building" className="text-[#000]">Ship Building</option>
+            <option value="Ship Repair" className="text-[#000]">
+              Ship Repair
+            </option>
+            <option value="Ship Building" className="text-[#000]">
+              Ship Building
+            </option>
           </select>
         </div>
       </div>
