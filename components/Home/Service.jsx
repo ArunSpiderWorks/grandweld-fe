@@ -49,7 +49,7 @@ const serviceData = [
   {
     id: 3,
     title: "Grandweld Capabilities List",
-    imageSrc: ServiceImg02,
+    imageSrc: ServiceImg03,
     bgImage: "/img/LP/list-bg-02.png",
     items: [
       "Conversion Projects",
@@ -73,7 +73,7 @@ export default function Service() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section id="service" className="relative md:py-[100px] py-[50px]">
+    <section id="service" className="relative md:pt-[100px] py-[50px]">
       <div className="container">
         <div className="flex mx-[-15px] flex-wrap">
           <div className="w-full px-[15px]">
