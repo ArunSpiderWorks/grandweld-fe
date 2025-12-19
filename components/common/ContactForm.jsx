@@ -11,7 +11,7 @@ export default function ContactForm({}) {
           World-Class <strong>Shipbuilding & Ship Repair</strong> Services in
           Dubai
         </h2>
-        <div className="input-block mb-[25px]">
+        <div className="input-block mb-[20px]">
           <input
             type="text"
             name="Company Name"
@@ -20,7 +20,7 @@ export default function ContactForm({}) {
           />
         </div>
 
-        <div className="input-block mb-[25px]">
+        <div className="input-block mb-[20px]">
           <input
             type="email"
             name="email"
@@ -28,7 +28,7 @@ export default function ContactForm({}) {
             className="input-item w-full border py-[12px] px-[20px] bg-[#fff] rounded-[40px] outline-0 border-[#001D21] text-[#4F767C] text-[18px] placeholder:text-[#000]"
           />
         </div>
-        <div className="input-block mb-[25px]">
+        <div className="input-block mb-[20px]">
           <input
             type="phone"
             name="phone"
@@ -37,7 +37,7 @@ export default function ContactForm({}) {
           />
         </div>
 
-        <div className="input-block mb-[25px]">
+        <div className="input-block mb-[20px]">
           <select
             name="service"
             className="input-item w-full border py-[12px] px-[20px] bg-[#fff] rounded-[40px] outline-0 border-[#001D21] text-[#4F767C] text-[18px] placeholder:text-[#000]"

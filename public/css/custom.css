@@ -173,15 +173,15 @@
   letter-spacing: 0.24px;
 }
 
-.about-statics h3{
-  color: #1E1E1E;
-  text-align: center;
-  font-size: 55px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 59px; /* 107.273% */
-  letter-spacing: -1.1px;
-  text-transform: capitalize;
+.about-statics h3 {
+    color: #1e1e1e;
+    text-align: center;
+    letter-spacing: -1.1px;
+    text-transform: capitalize;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
 }
 
 .about-statics p{

@@ -5,7 +5,7 @@ import { H1 } from "../common/Styling";
 import ContactForm from "../common/ContactForm";
 export default function HomeBanner({}) {
   return (
-    <section id="home-banner" className="relative min-h-[600px] h-screen">
+    <section id="home-banner" className="relative lg:min-h-[780px] h-screen">
       <div className="home-banner-img h-full ">
         <Image
           src={HomeBannerImg}
@@ -18,7 +18,7 @@ export default function HomeBanner({}) {
 
       <div className="home-banner-content-block absolute bottom-[50px] w-full">
         <div className="container">
-          <div className="flex mx-[-15px] flex-wrap items-end">
+          <div className="flex mx-[-15px] flex-wrap items-end justify-between">
             <div className="lg:w-6/12 w-full px-[15px]">
               <div className="home-banner-content-block-left">
                 <ButtonRound text="Since 1982" className="text-[13px]" />
@@ -35,7 +35,7 @@ export default function HomeBanner({}) {
                 </p>
               </div>
             </div>
-            <div className="lg:w-6/12 w-full px-[15px]">
+            <div className="lg:w-5/12 w-full px-[15px]">
               <div className="lg:block hidden">
                 <ContactForm />
               </div>

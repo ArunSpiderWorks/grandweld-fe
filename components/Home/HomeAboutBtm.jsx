@@ -72,20 +72,30 @@ export default function HomeAboutBtm() {
           <div className="flex flex-col justify-between">
             <div className="about-statics">
               <div className="border-b border-[#1E1E1E] pb-[12px] flex items-center justify-between mb-[80px]">
-                <h3 className="font-segoe-ui pr-[15px]">1982</h3>
+                <h3 className="font-segoe-ui pr-[15px]">Since 1982</h3>
 
-                <p className="font-segoe-ui max-w-[260px]">
-                  Over four decades of expertise in the offshore and marine
-                  industry
+                <p className="font-segoe-ui max-w-[360px]">
+                  Grandweld Shipyards has been providing{" "}
+                  <b>
+                    world-class shipbuilding, repair and marine engineering
+                    solutions
+                  </b>{" "}
+                  from Dubai.
                 </p>
               </div>
 
               <div className="border-b border-[#1E1E1E] pb-[12px] flex items-center justify-between mb-[80px]">
-                <h3 className="font-segoe-ui pr-[15px]">1982</h3>
+                <h3 className="font-segoe-ui pr-[15px]">
+                  40<sup>+</sup> years
+                </h3>
 
-                <p className="font-segoe-ui max-w-[260px]">
-                  Over four decades of expertise in the offshore and marine
-                  industry
+                <p className="font-segoe-ui max-w-[360px]">
+                  Backed by{" "}
+                  <b>
+                    40+ years of experience, we deliver reliable shipbuilding,
+                    repair, conversion, and offshore marine engineering
+                    solutions worldwide.
+                  </b>
                 </p>
               </div>
             </div>
