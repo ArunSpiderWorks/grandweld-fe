@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import ServiceImg01 from "@/public/img/LP/service-img-01.png";
 import ServiceImg02 from "@/public/img/LP/service-img-02.png";
@@ -7,8 +9,8 @@ import ServiceImg03 from "@/public/img/LP/service-img-03.png";
 import { ButtonRound } from "../common/Button";
 import { H2 } from "../common/Styling";
 import { BtnLinkArrow } from "../common/svgIcons";
-
-// Define types for service items
+import PopupModal from "../common/PopupModal";
+import { useState } from "react";
 
 const serviceData = [
   {
@@ -65,24 +67,11 @@ const serviceData = [
       "2-Stroke Engine Services",
     ],
   },
-  // Add third service if needed
-  // {
-  //   id: 3,
-  //   title: "Consultation Services",
-  //   imageSrc: ServiceImg03,
-  //   bgImage:
-  //     "linear-gradient(rgba(191, 182, 168, 0.9), rgba(191, 182, 168, 0.9)), url('/img/LP/list-bg-01.png')",
-  //   items: [
-  //     "Technical Consultation",
-  //     "Design Optimization",
-  //     "Compliance Advisory",
-  //     "Project Management",
-  //     "Quality Assurance",
-  //   ],
-  // },
 ];
 
 export default function Service() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="service" className="relative py-[100px]">
       <div className="container">
@@ -101,19 +90,17 @@ export default function Service() {
               }`}
             >
               <div className="service-list-item grid grid-cols-12 rounded-lg overflow-hidden shadow-lg h-full">
-                {/* Image Section */}
                 <div className="service-list-item-img sm:col-span-6 col-span-12 relative">
                   <Image
                     src={service.imageSrc}
                     alt={service.title}
                     width={340}
                     height={400}
-                    className="w-full  object-cover sm:min-h-[400px] sm:h-full h-[300px] min-h-[300px]"
+                    className="w-full object-cover sm:min-h-[400px] sm:h-full h-[300px] min-h-[300px]"
                     priority={service.id === 1}
                   />
                 </div>
 
-                {/* Details Section with Background Image */}
                 <div
                   className="service-list-item-details sm:col-span-6 col-span-12 py-[30px] px-[24px] relative"
                   style={{
@@ -143,7 +130,8 @@ export default function Service() {
 
                     <ButtonRound
                       text="Get a Quote"
-                      className="text-[14px] capitalize flex items-center justify-between w-full mt-6 text-[#000] "
+                      onClick={() => setIsModalOpen(true)}
+                      className="text-[14px] capitalize flex items-center justify-between w-full mt-6 text-[#000]"
                       arrow={
                         <span className="text-white w-[18px] h-[18px] rounded-[50%] bg-[#fff] flex items-center justify-center">
                           <BtnLinkArrow />
@@ -157,6 +145,8 @@ export default function Service() {
           ))}
         </div>
       </div>
+
+      <PopupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

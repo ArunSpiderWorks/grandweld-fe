@@ -86,7 +86,7 @@ export default function HomeAboutBtm() {
 
               <div className="border-b border-[#1E1E1E] pb-[12px] flex items-center justify-between mb-[80px]">
                 <h3 className="font-segoe-ui pr-[15px]">
-                  40<sup>+</sup> years
+                  40+ years
                 </h3>
 
                 <p className="font-segoe-ui max-w-[360px]">
