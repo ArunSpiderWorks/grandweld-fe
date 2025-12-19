@@ -20,6 +20,8 @@ import Client13 from "@/public/img/LP/image-13.webp";
 import Client14 from "@/public/img/LP/image-14.webp";
 import Client15 from "@/public/img/LP/image-15.webp";
 import LogoLoop from "@/components/common/LogoLoop";
+import PopupModal from "../common/PopupModal";
+import { useState } from "react";
 
 const clientImages = [
   Client01,
@@ -40,6 +42,7 @@ const clientImages = [
 ];
 
 export default function IndustryLeaders() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id="IndustryLeaders" className="relative py-[50px] bg-[#212121]">
       <div className="container">
@@ -81,7 +84,8 @@ export default function IndustryLeaders() {
             </h5>
             <ButtonRound
               text="Get a Quote"
-              className="text-[13px] max-w-[193px] w-full capitalize flex items-center justify-between w-full text-[#2C0C0C] "
+              onClick={() => setIsModalOpen(true)}
+              className="bg-[#fff] hover:bg-[#000] text-[#050505] hover:text-[#fff] text-[13px] max-w-[193px] w-full capitalize flex items-center justify-between w-full text-[#2C0C0C] "
               arrow={
                 <span className="text-white w-[18px] h-[18px] rounded-[50%] bg-[#fff] flex items-center justify-center">
                   <BtnLinkArrow />
@@ -91,6 +95,8 @@ export default function IndustryLeaders() {
           </div>
         </div>
       </div>
+
+      <PopupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

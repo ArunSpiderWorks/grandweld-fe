@@ -3,8 +3,11 @@ import AboutShipImg from "@/public/img/LP/about-ship-img.png";
 import { ButtonRound } from "../common/Button";
 import { H2, P } from "../common/Styling";
 import { BtnLinkArrow, PriceStar } from "../common/svgIcons";
-
+import PopupModal from "../common/PopupModal";
+import { useState } from "react";
 export default function VideoWrapper() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="VideoWrapper" className="relative ">
       <div className="video-wrapper-block relative">
@@ -52,7 +55,8 @@ export default function VideoWrapper() {
 
               <ButtonRound
                 text="Get a Quote"
-                className="text-[13px] max-w-[193px] w-full capitalize flex items-center justify-between w-full text-[#2C0C0C] "
+                onClick={() => setIsModalOpen(true)}
+                className="bg-[#fff] hover:bg-[#000] text-[#050505] hover:text-[#fff] text-[13px] max-w-[193px] w-full capitalize flex items-center justify-between w-full text-[#2C0C0C] "
                 arrow={
                   <span className="text-white w-[18px] h-[18px] rounded-[50%] bg-[#fff] flex items-center justify-center">
                     <BtnLinkArrow />
@@ -63,6 +67,7 @@ export default function VideoWrapper() {
           </div>
         </div>
       </div>
+      <PopupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

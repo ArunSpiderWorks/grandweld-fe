@@ -6,8 +6,11 @@ import AboutBtmSubImg03 from "@/public/img/LP/about-btm-sub-03.jpg";
 import { ButtonRound } from "../common/Button";
 import { H2, P } from "../common/Styling";
 import { BtnLinkArrow } from "../common/svgIcons";
-
+import { useState } from "react";
+import PopupModal from "../common/PopupModal";
 export default function HomeAboutBtm() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id="HomeAboutBtm" className="relative pt-[50px] pb-[100px]">
       <div className="container">
@@ -59,7 +62,8 @@ export default function HomeAboutBtm() {
             <div className="absolute bottom-[0px] left-0 w-full p-[30px]">
               <ButtonRound
                 text="Get a Quote"
-                className="text-[14px] capitalize flex items-center justify-between w-full mt-6 text-[#000] border border-[#EEE] bg-[#fff] w-full "
+                     onClick={() => setIsModalOpen(true)}
+                className="text-[14px] capitalize flex items-center justify-between w-full mt-6 text-[#000] border border-[#EEE] bg-[#fff] hover:bg-[#000] text-[#050505] hover:text-[#fff] w-full "
                 arrow={
                   <span className="text-white w-[18px] h-[18px] rounded-[50%] bg-[#fff] flex items-center justify-center">
                     <BtnLinkArrow />
@@ -142,6 +146,8 @@ export default function HomeAboutBtm() {
           </div>
         </div>
       </div>
+
+      <PopupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

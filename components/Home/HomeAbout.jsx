@@ -1,15 +1,21 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import AboutShipImg from "@/public/img/LP/about-ship-img.png";
 import { ButtonRound } from "../common/Button";
 import { H2, P } from "../common/Styling";
 import { BtnLinkArrow } from "../common/svgIcons";
+import PopupModal from "../common/PopupModal";
 
 export default function HomeAbout() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="HomeAbout" className="relative py-[50px]">
       <div className="container">
-        <div className="flex mx-[-15px] flex-wrap ">
-          <div className="w-full px-[15px] ">
+        <div className="flex mx-[-15px] flex-wrap">
+          <div className="w-full px-[15px]">
             <div className="flex px-[30px] justify-between items-end relative">
               <div className="HomeAbout-title max-w-[373px] w-full pb-[160px]">
                 <H2 text="Our Engineering Department" />
@@ -18,18 +24,21 @@ export default function HomeAbout() {
                   className="mt-[13px]"
                   text="With 40+ years of expertise since 1982, Grandweld operates one of the most advanced and trusted shipyards in Dubai Maritime City. Our 55,000 m² integrated facility is engineered to deliver world-class shipbuilding, ship repair, and vessel conversion with unmatched precision and efficiency."
                 />
+
                 <P
                   className="mt-[13px]"
                   text="Built on decades of proven performance, the yard features modern workshops, covered fabrication areas, outfitting zones, dedicated storage sections, and high-capacity ship lifts — enabling us to manage multiple large-scale projects simultaneously."
                 />
+
                 <P
                   className="mt-[13px]"
-                  text="We collaborate with leading global marine suppliers, classification societies, and industry partners, ensuring every vessel meets the highest standards of safety, engineering excellence, and compliance. Supported by a highly experienced workforce and strict QHSE practices, we guarantee reliable timelines, superior workmanship, and long-term value for our clients."
+                  text="We collaborate with leading global marine suppliers, classification societies, and industry partners, ensuring every vessel meets the highest standards of safety, engineering excellence, and compliance."
                 />
 
                 <ButtonRound
+                  onClick={() => setIsModalOpen(true)}
                   text="Get a Quote"
-                  className="text-[14px] capitalize flex items-center justify-between max-w-[242px] w-full mt-6 text-[#000] border border-[#EEE]"
+                  className="text-[14px] capitalize flex items-center justify-between max-w-[242px] w-full mt-6 text-[#fff] bg-[#000] border border-[#EEE]"
                   arrow={
                     <span className="text-white">
                       <BtnLinkArrow />
@@ -38,7 +47,7 @@ export default function HomeAbout() {
                 />
               </div>
 
-              <div className="about-ship-img-block absolute w-[680px] left-[280px] top-[50%] transform translate-y-[-50%] ">
+              <div className="about-ship-img-block absolute w-[680px] left-[280px] top-[50%] transform translate-y-[-50%]">
                 <Image
                   src={AboutShipImg}
                   alt="AboutShipImg"
@@ -48,36 +57,33 @@ export default function HomeAbout() {
                 />
               </div>
 
-              <div className="grid gap-[5px] grid-cols-3 ">
+              <div className="grid gap-[5px] grid-cols-3">
                 <div className="bg-[#F8F2E8] w-[200px] rounded-[6px] py-[15px] px-[18px]">
-                  <h3 className="text-[#1E1E1E] font-segoe-ui text-[13px] font-[600] capitalize">
+                  <h3 className="text-[#1E1E1E] text-[13px] font-[600]">
                     Marine Systems Engineering
                   </h3>
                   <hr className="border-[#BFB6A8] mt-[10px] mb-[15px]" />
-
-                  <h5 className="text-[#1E1E1E] font-segoe-ui text-[13px] font-[400] leading-[18px] tracking-[0.13px]">
+                  <h5 className="text-[13px]">
                     Modern, efficient, and reliable ship solutions.
                   </h5>
                 </div>
 
                 <div className="bg-[#E8F1F8] w-[200px] rounded-[6px] py-[15px] px-[18px]">
-                  <h3 className="text-[#1E1E1E] font-segoe-ui text-[13px] font-[600] capitalize">
+                  <h3 className="text-[13px] font-[600]">
                     CAD/CAM & 3D Modeling
                   </h3>
                   <hr className="border-[#BFB6A8] mt-[10px] mb-[15px]" />
-
-                  <h5 className="text-[#1E1E1E] font-segoe-ui text-[13px] font-[400] leading-[18px] tracking-[0.13px]">
+                  <h5 className="text-[13px]">
                     Smooth process from design to delivery.
                   </h5>
                 </div>
 
                 <div className="bg-[#E8F8EB] w-[200px] rounded-[6px] py-[15px] px-[18px]">
-                  <h3 className="text-[#1E1E1E] font-segoe-ui text-[13px] font-[600] capitalize">
-                    Sustainable Engineering
+                  <h3 className="text-[13px] font-[600]">
+                    Sustainable Engineering
                   </h3>
                   <hr className="border-[#BFB6A8] mt-[10px] mb-[15px]" />
-
-                  <h5 className="text-[#1E1E1E] font-segoe-ui text-[13px] font-[400] leading-[18px] tracking-[0.13px]">
+                  <h5 className="text-[13px]">
                     Eco-friendly and future-ready ships.
                   </h5>
                 </div>
@@ -86,6 +92,8 @@ export default function HomeAbout() {
           </div>
         </div>
       </div>
+
+      <PopupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

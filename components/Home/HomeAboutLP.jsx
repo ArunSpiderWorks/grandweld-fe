@@ -3,8 +3,10 @@ import AboutShipImg from "@/public/img/LP/about-ship-img.png";
 import { ButtonRound } from "../common/Button";
 import { H2, P } from "../common/Styling";
 import { BtnLinkArrow } from "../common/svgIcons";
-
+import { useState } from "react";
+import PopupModal from "../common/PopupModal";
 export default function HomeAboutLP() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section id="HomeAbout" className="relative pb-[100px]">
       <div className="container">
@@ -29,7 +31,8 @@ export default function HomeAboutLP() {
 
                 <ButtonRound
                   text="Get a Quote"
-                  className="text-[14px] capitalize flex items-center justify-between max-w-[242px] w-full mt-6 text-[#000] border border-[#EEE]"
+                       onClick={() => setIsModalOpen(true)}
+                  className="text-[14px] capitalize flex items-center justify-between max-w-[242px] w-full mt-6 text-[#fff] bg-[#000] border border-[#EEE]"
                   arrow={
                     <span className="text-white w-[18px] h-[18px] rounded-[50%] bg-[#fff] flex items-center justify-center">
                       <BtnLinkArrow />
@@ -88,6 +91,8 @@ export default function HomeAboutLP() {
           </div>
         </div>
       </div>
+
+      <PopupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

@@ -57,7 +57,7 @@ export default function ContactForm({}) {
       </div>
       <ButtonRound
         text="Get a Quote"
-        className="text-[14px] capitalize flex items-center justify-between max-w-[250px] w-full mt-6 text-[#000] border border-[#EEE] bg-[#fff]  "
+        className="bg-[#000] hover:bg-[#fff] text-[#fff] hover:text-[#000] text-[14px] capitalize flex items-center justify-between max-w-[250px] w-full mt-6 border border-[#EEE] "
         arrow={
           <span className="text-white w-[18px] h-[18px] rounded-[50%] bg-[#fff] flex items-center justify-center">
             <BtnLinkArrow />

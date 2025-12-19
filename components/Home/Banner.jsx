@@ -5,7 +5,7 @@ import { H1 } from "../common/Styling";
 import ContactForm from "../common/ContactForm";
 export default function HomeBanner({}) {
   return (
-    <section id="home-banner" className="relative lg:min-h-[780px] h-screen">
+    <section id="home-banner" className="relative lg:min-h-[780px] h-[400px]">
       <div className="home-banner-img h-full ">
         <Image
           src={HomeBannerImg}
@@ -20,8 +20,8 @@ export default function HomeBanner({}) {
         <div className="container">
           <div className="flex mx-[-15px] flex-wrap items-end justify-between">
             <div className="lg:w-6/12 w-full px-[15px]">
-              <div className="home-banner-content-block-left">
-                <ButtonRound text="Since 1982" className="text-[13px]" />
+              <div className="home-banner-content-block-left md:block hidden">
+                <ButtonRound text="Since 1982" className="text-[13px] bg-[#fff] hover:bg-[#000] text-[#050505] hover:text-[#fff]" />
 
                 <h1 className="text-[#fff] font-segoe-ui lg:text-[64px] text-[50px] font-[400] lg:leading-[64px] leading-[50px] tracking-[-0.64px] mt-[15px]">
                   World-Class <strong>Shipbuilding & Ship Repair</strong>{" "}

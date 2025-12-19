@@ -73,7 +73,7 @@ export default function Service() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section id="service" className="relative py-[100px]">
+    <section id="service" className="relative md:py-[100px] py-[50px]">
       <div className="container">
         <div className="flex mx-[-15px] flex-wrap">
           <div className="w-full px-[15px]">
@@ -131,7 +131,7 @@ export default function Service() {
                     <ButtonRound
                       text="Get a Quote"
                       onClick={() => setIsModalOpen(true)}
-                      className="text-[14px] capitalize flex items-center justify-between w-full mt-6 text-[#000]"
+                      className="bg-[#fff] hover:bg-[#000] text-[#050505] hover:text-[#fff] text-[14px] capitalize flex items-center justify-between w-full mt-6"
                       arrow={
                         <span className="text-white w-[18px] h-[18px] rounded-[50%] bg-[#fff] flex items-center justify-center">
                           <BtnLinkArrow />

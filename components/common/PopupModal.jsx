@@ -9,25 +9,17 @@ export default function PopupModal({ isOpen, onClose }) {
     return () => (document.body.style.overflow = "");
   }, [isOpen]);
 
-  return (
-    <div
-      className={`fixed inset-0 z-[999] flex items-center justify-center transition-all duration-300 ${
-        isOpen ? "visible opacity-100" : "invisible opacity-0"
-      }`}
-    >
-      <div
-        onClick={onClose}
-        className={`absolute inset-0 bg-black/60 transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0"
-        }`}
-      />
+  if (!isOpen) return null; // ✅ IMPORTANT
 
+  return (
+    <div className="fixed inset-0 z-[999] flex items-center justify-center">
+      {/* Overlay */}
+      <div onClick={onClose} className="absolute inset-0 bg-black/60" />
+
+      {/* Modal */}
       <div
-        className={`relative z-10 w-[100%] max-w-[580px] bg-white rounded-xl p-4 transform transition-all duration-300 ${
-          isOpen
-            ? "opacity-100 translate-y-0 scale-100"
-            : "opacity-0 translate-y-8 scale-95"
-        }`}
+        onClick={(e) => e.stopPropagation()} // 🔥 FIX
+        className="relative z-10 w-full max-w-[580px] bg-white rounded-xl p-4"
       >
         <button
           onClick={onClose}
@@ -36,7 +28,6 @@ export default function PopupModal({ isOpen, onClose }) {
           ×
         </button>
 
-        
         <ContactForm />
       </div>
     </div>

@@ -120,7 +120,7 @@ const Header = ({ showBg = true, data }) => {
             <div className="flex menu-nav">
               <ButtonRound
                 text="Get a Callback"
-                className="text text-[12.17px] flex items-center gap-[10px]"
+                className="text text-[12.17px] flex items-center gap-[10px] bg-[#fff] hover:bg-[#000] text-[#050505] hover:text-[#fff]"
                 span={
                   <span className="round-span w-[13px] h-[13px] rounded-[50%] bg-[linear-gradient(180deg,#64C7FC_0%,#004C7E_100%)]"></span>
                 }
