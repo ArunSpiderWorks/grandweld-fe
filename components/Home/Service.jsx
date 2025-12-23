@@ -15,6 +15,20 @@ import { useState } from "react";
 const serviceData = [
   {
     id: 1,
+    title: "Ship Building ",
+    imageSrc: ServiceImg02,
+    bgImage: "/img/LP/list-bg-02.png",
+    items: [
+      "Crewboats / Crew Transfer Vessels (CTVs) & Security Boats",
+      "Pilot Boats",
+      "Fast Ferries",
+      "OSVs (Offshore Support Vessels) & Workboats",
+      "Harbour & Terminal Tugs",
+      "Shadow Yachts / Specialty Vessels",
+    ],
+  },
+  {
+    id: 2,
     title: "Ship Repair Services",
     imageSrc: ServiceImg01,
     bgImage: "/img/LP/list-bg-01.png",
@@ -32,20 +46,7 @@ const serviceData = [
       "Refits and Greentech upgrades",
     ],
   },
-  {
-    id: 2,
-    title: "Ship Building ",
-    imageSrc: ServiceImg02,
-    bgImage: "/img/LP/list-bg-02.png",
-    items: [
-      "Crewboats / Crew Transfer Vessels (CTVs) & Security Boats",
-      "Pilot Boats",
-      "Fast Ferries",
-      "OSVs (Offshore Support Vessels) & Workboats",
-      "Harbour & Terminal Tugs",
-      "Shadow Yachts / Specialty Vessels",
-    ],
-  },
+
   {
     id: 3,
     title: "Grandweld Capabilities List",
@@ -120,7 +121,7 @@ export default function Service() {
                         {service.items.map((item, index) => (
                           <li
                             key={index}
-                            className="text-[#1E1E1E] text-[14px] font-segoe-ui font-[400] leading-[18px] bg-white/40 px-3 py-1 rounded backdrop-blur-sm"
+                            className="text-[#636262] text-[14px] font-segoe-ui font-[600] leading-[18px] bg-white/60 px-3 py-1 rounded backdrop-blur-sm"
                           >
                             {item}
                           </li>

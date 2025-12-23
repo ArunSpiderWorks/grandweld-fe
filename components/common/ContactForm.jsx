@@ -52,6 +52,9 @@ export default function ContactForm({}) {
             <option value="Ship Building" className="text-[#000]">
               Ship Building
             </option>
+            <option value="Ship Building" className="text-[#000]">
+             Job Requirements / Others
+            </option>
           </select>
         </div>
       </div>
