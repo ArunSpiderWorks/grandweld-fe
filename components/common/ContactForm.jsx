@@ -40,10 +40,6 @@ export default function ContactForm() {
   });
 
   const onSubmit = async (data) => {
-    if (enquiryType === "job-enquiries") {
-      window.location.href = "https://www.grandweld.com/explore-careers/";
-      return;
-    }
     console.log("Form Data:", data);
     setLoading(true);
 
@@ -93,9 +89,6 @@ export default function ContactForm() {
                 const val = e.target.value;
                 setEnquiryType(val);
                 setValue("enquiryType", val, { shouldValidate: true });
-                if (val === "job-enquiry") {
-                  window.open("https://www.grandweld.com/explore-careers/", "_blank");
-                }
               }}
               className="w-full border py-[10px] pl-[20px] pr-[40px] bg-[#fff] rounded-[40px] appearance-none cursor-pointer"
             >
