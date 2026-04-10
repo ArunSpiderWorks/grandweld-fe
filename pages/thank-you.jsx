@@ -71,7 +71,7 @@ export default function ThankYouPage() {
           <p className="max-w-[560px] font-segoe-ui text-[#6B7280] text-[16px] leading-[28px] mb-10">
             Our team will connect with you shortly. In the meantime, explore our{" "}
             <Link href="/" className="text-[#2C7BE5] hover:underline">
-              latest shipbuilding projects
+              latest ship building projects
             </Link>
             {""}
             and see how we’re shaping the future of maritime excellence.
