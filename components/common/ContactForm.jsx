@@ -54,6 +54,7 @@ export default function ContactForm() {
         note: data.message,
         extra_data: {
           source: "Website Contact Form",
+          category: data.enquiryType,
         },
       });
 
