@@ -40,7 +40,7 @@ const Base = ({ children, headerBg = true, data }) => {
 
         <div className="flex items-center gap-[20px] max-w-[400px] w-full">
           <ButtonRound
-            text="Call Now"
+            text="Call Repair Experts"
             link="tel:+971 4 4270800"
             className="bg-[#fff] border border-[#000] hover:bg-[#000] text-[#050505] hover:text-[#fff] text-[13px] max-w-[193px] w-full capitalize flex items-center justify-between"
             arrow={
@@ -51,7 +51,7 @@ const Base = ({ children, headerBg = true, data }) => {
           />
 
           <ButtonRound
-            text="Enquire Now"
+            text="Request Repair Quote"
             onClick={() => setIsModalOpen(true)}
             className="text-[14px] capitalize flex items-center justify-between max-w-[242px] w-full text-[#fff] bg-[#000] border border-[#EEE] hover:bg-[#fff] hover:text-[#000]"
             arrow={
