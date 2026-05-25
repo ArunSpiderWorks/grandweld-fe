@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import ContactForm from "./ContactForm";
 
-export default function PopupModal({ isOpen, onClose }) {
+export default function PopupForm() {
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("modal-open");
@@ -18,22 +20,44 @@ export default function PopupModal({ isOpen, onClose }) {
     };
   }, [isOpen]);
 
-  if (!isOpen) return null; // ✅ IMPORTANT
+  useEffect(() => {
+    let isScrolling = false;
+
+    const onScroll = () => {
+      isScrolling = true;
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    const interval = setInterval(() => {
+      if (isScrolling) {
+        if (!document.body.classList.contains("modal-open")) {
+          setIsOpen((prev) => {
+            if (!prev) return true;
+            return prev;
+          });
+        }
+        isScrolling = false;
+      }
+    }, 10000); // Every 10 seconds
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      clearInterval(interval);
+    };
+  }, []);
+
+  if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[999] flex items-center justify-center">
-      {/* Overlay */}
-      <div onClick={onClose} className="absolute inset-0 bg-black/60" />
-
-      {/* Modal */}
-      <div
-        onClick={(e) => e.stopPropagation()} // 🔥 FIX
-        className="relative z-10 w-full max-w-[580px]"
-      >
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4  bg-opacity-60 backdrop-blur-sm">
+      <div className="relative w-full max-w-[500px] max-h-[90vh] overflow-y-auto">
+        {/* Contact Form */}
         <ContactForm />
 
+        {/* Close Button */}
         <button
-          onClick={onClose}
+          onClick={() => setIsOpen(false)}
           className="absolute top-[35px] right-[25px] z-[60] p-2 bg-[#E31E24] text-white rounded-full hover:bg-red-700 transition-colors shadow-md flex items-center justify-center"
           aria-label="Close form"
         >
@@ -51,7 +75,6 @@ export default function PopupModal({ isOpen, onClose }) {
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
         </button>
-
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ import HomeVideoSection from "@/components/Home/HomeVideoSection";
 import VesselsWeRepair from "@/components/Home/vessel";
 import Thankyou from "@/pages/thank-you";
 import Head from "next/head";
+import PopupForm from "@/components/common/PopupForm";
 
 export default function Home({ }) {
   return (
@@ -76,6 +77,7 @@ export default function Home({ }) {
 
         <HomeVideoSection />
         <IndustryLeaders />
+        <PopupForm />
       </Base>
     </>
   );
