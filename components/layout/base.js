@@ -65,6 +65,26 @@ const Base = ({ children, headerBg = true, data }) => {
 
       <Footer data={data} />
       <PopupModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/971501508524"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`fixed right-[20px] md:right-[30px] z-[100] w-[50px] h-[50px] md:w-[60px] md:h-[60px] hover:scale-110 transition-all duration-300 flex items-center justify-center group ${
+          showSticky ? "bottom-[140px] xl:bottom-[30px]" : "bottom-[20px] md:bottom-[30px]"
+        }`}
+      >
+        {/* Wave Pulse Effect */}
+        <span className="absolute w-full h-full rounded-full bg-[#25D366] opacity-60 animate-ping group-hover:animate-none"></span>
+        
+        {/* Icon */}
+        <img
+          src="/floating-whatsapp.svg"
+          alt="WhatsApp"
+          className="relative z-10 w-full h-full object-contain"
+        />
+      </a>
     </>
   );
 };
