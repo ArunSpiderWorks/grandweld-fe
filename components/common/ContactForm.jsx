@@ -226,7 +226,7 @@ export default function ContactForm() {
           disabled={loading}
           className="w-full bg-[#E31E24] hover:bg-red-700 text-white text-[16px] font-bold uppercase py-[12px] rounded-[8px] flex items-center justify-center relative transition-colors duration-300 shadow-md"
         >
-          {loading ? "Submitting..." : "ENQUIRE NOW"}
+          {loading ? "Submitting..." : "Request Repair Quote"}
           {!loading && (
             <span className="absolute right-[12px] w-[26px] h-[26px] rounded-full bg-white flex items-center justify-center text-[#E31E24]">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
