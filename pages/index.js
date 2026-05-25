@@ -12,7 +12,7 @@ import VesselsWeRepair from "@/components/Home/vessel";
 import Thankyou from "@/pages/thank-you";
 import Head from "next/head";
 
-export default function Home({}) {
+export default function Home({ }) {
   return (
     <>
       <Head>

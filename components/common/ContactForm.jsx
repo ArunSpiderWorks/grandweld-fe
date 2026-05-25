@@ -74,7 +74,7 @@ export default function ContactForm() {
       
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-[#181D23] border border-[#ffff] border-[1px] py-[35px] px-[30px] rounded-[15px] shadow-2xl relative"
+        className="bg-[#181D23] border border-[#ffff] py-[25px] px-[20px] md:py-[35px] md:px-[30px] rounded-[15px] shadow-2xl relative"
       >
         <div className="w-full">
           <h2 className="text-[#fff] font-segoe-ui lg:text-[26px] text-[22px] font-bold uppercase leading-tight mb-[6px]">
