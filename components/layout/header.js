@@ -58,7 +58,10 @@ const Header = ({ showBg = true, data }) => {
                     className="w-[100px] object-cover"
                   />
                 </a>
+                
               </div>
+         
+              
 
               {/* <ul className="md:flex gap-[40px] items-center hidden menu-nav">
                 {menu.map((item, i) => (
@@ -117,17 +120,21 @@ const Header = ({ showBg = true, data }) => {
               </ul> */}
             </div>
 
+            
             <a href="tel:+97144270800">
               <div className="flex menu-nav">
                 <ButtonRound
                   text="+971 4 4270800"
-                  className="text text-[14px] flex items-center gap-[10px] bg-[#fff] hover:bg-[#000] text-[#050505] hover:text-[#fff]"
+                  className="text text-[15px] font-bold flex items-center gap-[10px] bg-[#fff] hover:bg-[#000] text-[#050505] hover:text-[#fff] px-[20px] py-[10px] rounded-full shadow-md transition-colors"
                   span={
-                    <span className="round-span w-[20px] h-[20px] rounded-[50%] bg-[linear-gradient(180deg,#64C7FC_0%,#004C7E_100%)]"></span>
+                    <span className="round-span w-[24px] h-[24px] rounded-[50%] bg-[#0B2136] flex items-center justify-center text-white">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </span>
                   }
                 />
               </div>
             </a>
+           
           </div>
         </div>
       </header>

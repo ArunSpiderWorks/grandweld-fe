@@ -3,41 +3,93 @@ import HomeBannerImg from "@/public/img/LP/new/home-banner.jpg";
 import { ButtonRound } from "../common/Button";
 import { H1 } from "../common/Styling";
 import ContactForm from "../common/ContactForm";
+
 export default function HomeBanner({}) {
   return (
-    <section id="home-banner" className="relative lg:min-h-[780px] h-[400px]">
-      <div className="home-banner-img h-full">
+    <section id="home-banner" className="relative lg:min-h-[850px] min-h-[700px] pt-[200px] pb-[100px] flex items-center">
+      <div className="home-banner-img h-full absolute inset-0 z-0">
         <Image
           src={HomeBannerImg}
           alt="HomeBannerImg"
           width={1600}
           height={750}
-          className="w-full h-full object-cover "
+          className="w-full h-full object-cover"
         />
-           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
       </div>
 
-      <div className="home-banner-content-block absolute bottom-[80px] w-full">
+      <div className="home-banner-content-block relative w-full z-10">
         <div className="container">
           <div className="flex mx-[-15px] flex-wrap items-end justify-between">
-            <div className="lg:w-6/12 w-full px-[15px]">
-           <div className="home-banner-content-block-left md:block hidden relative lg:top-[-60px]">
+            <div className="lg:w-7/12 w-full px-[15px]">
+              <div className="home-banner-content-block-left md:block hidden relative">
+                <div className="inline-flex items-center border border-[#E31E24]/80 rounded-[4px] relative mb-[20px]">
+                  {/* Thin line passing through the middle of the text, but let's just make it a nice bordered pill as it looks in standard. Actually it looks like text with lines on left and right. */}
+                  <div className="absolute left-0 top-1/2 -translate-x-full w-[40px] h-[1px] bg-[#E31E24]"></div>
+                  <div className="absolute right-0 top-1/2 translate-x-full w-[40px] h-[1px] bg-[#E31E24]"></div>
+                  <div className="bg-[#000]/60 px-[15px] py-[6px] rounded-[4px] border border-[#E31E24]/50">
+                    <span className="text-[#E2E8F0] text-[13px] font-semibold tracking-widest uppercase">
+                      SHIP REPAIR & MAINTENANCE EXPERTS
+                    </span>
+                  </div>
+                </div>
 
-                <ButtonRound
-                  text="Since 1984"
-                  className="text-[13px] bg-[#fff] hover:bg-[#000] text-[#050505] hover:text-[#fff]"
-                />
-
-                <h1 className="text-[#fff] font-segoe-ui lg:text-[64px] text-[50px] font-[400] lg:leading-[64px] leading-[50px] tracking-[-0.64px] mt-[15px]">
-                  Expert <strong> Ship Repair</strong> Solutions
-                  from UAE
+                <h1 className="text-[#fff] font-segoe-ui lg:text-[68px] text-[40px] font-[700] lg:leading-[1.1] leading-[1.2] tracking-tight mb-[20px]">
+                  Reduce Vessel<br />
+                  Downtime With<br />
+                  Expert Ship Repair<br />
+                  In <span className="text-[#E31E24]">Dubai</span>
                 </h1>
 
-                <p className="text-[#fff] font-segoe-ui text-[23px] font-normal leading-[24px] tracking-[-0.32px] mt-[35px]">
-                  Trusted Ship Repair Experts Since 1984
+                <p className="text-[#E2E8F0] font-segoe-ui text-[20px] font-normal leading-[1.5] mb-[50px] max-w-[600px]">
+                  Drydock, Afloat Repairs, Maintenance & Refit Services<br />With 40+ Years Of Experience.
                 </p>
+
+                {/* Icons Row */}
+                <div className="flex flex-wrap items-start gap-[25px]">
+                  <div className="flex items-center gap-[12px]">
+                    <div className="text-[#E31E24]">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <div>
+                      <div className="text-white font-bold text-[18px] leading-tight">40+</div>
+                      <div className="text-[#CBD5E1] text-[13px]">Years Experience</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-[12px]">
+                    <div className="text-[#E31E24]">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <div>
+                      <div className="text-white font-bold text-[18px] leading-tight">24/7</div>
+                      <div className="text-[#CBD5E1] text-[13px]">Emergency Support</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-[12px]">
+                    <div className="text-[#E31E24]">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                      <div className="text-white font-bold text-[18px] leading-tight">Dubai Maritime City</div>
+                      <div className="text-[#CBD5E1] text-[13px]">Strategic Location</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-[12px]">
+                    <div className="text-[#E31E24]">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div>
+                      <div className="text-white font-bold text-[18px] leading-tight">Trusted By</div>
+                      <div className="text-[#CBD5E1] text-[13px]">Global Operators</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+            
             <div className="lg:w-5/12 w-full px-[15px]">
               <div className="lg:block hidden">
                 <ContactForm />
