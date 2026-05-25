@@ -23,12 +23,12 @@ export default function HomeBanner({ }) {
           <div className="flex mx-[-15px] flex-wrap items-end justify-between gap-y-10">
             <div className="lg:w-7/12 xl:w-7/12 w-full px-[15px] pt-[80px] sm:pt-[120px] lg:pt-0">
               <div className="home-banner-content-block-left relative">
-                <div className="inline-flex items-center border border-[#E31E24]/80 rounded-[4px] relative mb-[15px] lg:mb-[20px]">
+                <div className="inline-flex items-center border border-[#E31E24]/80 rounded-[15px] relative mb-[15px] lg:mb-[20px]">
                   {/* Thin line passing through the middle of the text, but let's just make it a nice bordered pill as it looks in standard. Actually it looks like text with lines on left and right. */}
                   <div className="absolute left-0 top-1/2 -translate-x-full w-[20px] lg:w-[40px] h-[1px] bg-[#E31E24]"></div>
                   <div className="absolute right-0 top-1/2 translate-x-full w-[20px] lg:w-[40px] h-[1px] bg-[#E31E24]"></div>
-                  <div className="bg-[#000]/60 px-[10px] lg:px-[15px] py-[4px] lg:py-[6px] rounded-[4px] border border-[#E31E24]/50">
-                    <span className="text-[#E2E8F0] text-[11px] lg:text-[13px] font-semibold tracking-widest uppercase">
+                  <div className="bg-[#fff]/90 px-[10px] lg:px-[15px] py-[4px] lg:py-[6px] rounded-[14px] border border-[#E31E24]/90">
+                    <span className="text-[#000000ff] text-[11px] lg:text-[13px] font-semibold tracking-widest uppercase">
                       SHIP REPAIR & MAINTENANCE EXPERTS
                     </span>
                   </div>

@@ -77,6 +77,7 @@ export default function ContactForm() {
         className="bg-[#181D23] border border-[#ffff] py-[25px] px-[20px] md:py-[35px] md:px-[30px] rounded-[15px] shadow-2xl relative"
       >
         <div className="w-full">
+
           <h2 className="text-[#fff] font-segoe-ui lg:text-[26px] text-[22px] font-bold uppercase leading-tight mb-[6px]">
             TELL US YOUR <br />
             <span className="text-[#E31E24]">VESSEL</span> REQUIREMENT
