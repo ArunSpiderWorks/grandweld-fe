@@ -40,7 +40,10 @@ export default function PopupForm() {
       }
 
       if (isScrolling) {
-        if (!document.body.classList.contains("modal-open")) {
+        const banner = document.getElementById("home-banner");
+        const bannerHeight = banner ? banner.offsetHeight : window.innerHeight;
+
+        if (!document.body.classList.contains("modal-open") && window.scrollY > bannerHeight * 0.5) {
           setIsOpen((prev) => {
             if (!prev) return true;
             return prev;
