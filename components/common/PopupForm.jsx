@@ -39,7 +39,7 @@ export default function PopupForm() {
         }
         isScrolling = false;
       }
-    }, 10000); // Every 10 seconds
+    }, 20000); // Every 10 seconds
 
     return () => {
       window.removeEventListener("scroll", onScroll);
