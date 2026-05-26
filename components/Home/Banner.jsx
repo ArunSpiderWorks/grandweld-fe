@@ -13,9 +13,9 @@ export default function HomeBanner({ }) {
           alt="HomeBannerImg"
           width={1600}
           height={750}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-[20%_center] md:object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 md:via-black/40 to-transparent" />
       </div>
 
       <div className="home-banner-content-block relative w-full z-10">
