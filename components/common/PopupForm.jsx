@@ -22,6 +22,7 @@ export default function PopupForm() {
 
   useEffect(() => {
     let isScrolling = false;
+    let checkCount = 0;
 
     const onScroll = () => {
       isScrolling = true;
@@ -30,6 +31,14 @@ export default function PopupForm() {
     window.addEventListener("scroll", onScroll);
 
     const interval = setInterval(() => {
+      checkCount++;
+
+      if (!document.body.classList.contains("modal-open")) {
+        console.log(`Popup check counter: ${checkCount}. Popup  shown.`);
+      } else {
+        console.log(`Popup check counter: ${checkCount}. Popup is currently shown.`);
+      }
+
       if (isScrolling) {
         if (!document.body.classList.contains("modal-open")) {
           setIsOpen((prev) => {
@@ -39,7 +48,7 @@ export default function PopupForm() {
         }
         isScrolling = false;
       }
-    }, 20000); // Every 10 seconds
+    }, 20000); // Every 20 seconds
 
     return () => {
       window.removeEventListener("scroll", onScroll);
