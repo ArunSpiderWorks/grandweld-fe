@@ -110,7 +110,7 @@ export default function Service() {
               // service.id === 3 ? "lg:-7/12 w-full " : "lg:w-6/12 w-full"
               // }
             >
-              <div className="service-list-item flex items-center justify-between rounded-lg overflow-hidden shadow-lg h-full">
+              <div className="service-list-item flex flex-col sm:flex-row items-center justify-between rounded-lg overflow-hidden shadow-lg h-full">
                 <div className="service-list-item-img sm:w-6/12 w-full relative h-full min-h-[300px]">
                   <Image 
                     src={service.imageSrc}
