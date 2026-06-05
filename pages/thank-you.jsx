@@ -73,7 +73,7 @@ export default function ThankYouPage() {
             <Link href="/" className="text-[#2C7BE5] hover:underline">
               latest ship building projects
             </Link>
-            {""}
+            {" "}
             and see how we’re shaping the future of maritime excellence.
           </p>
 
