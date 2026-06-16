@@ -36,9 +36,9 @@ export default function HomeBanner({ }) {
 
                 <h1 className="text-[#fff] font-segoe-ui xl:text-[68px] lg:text-[50px] text-[36px] font-[700] lg:leading-[1.1] leading-[1.2] tracking-tight mb-[15px] lg:mb-[20px]">
                   Reduce Vessel<br className="hidden lg:block" />
-                  Downtime With<br />
+                  {" "}Downtime With<br />
                   Expert Ship Repair<br className="hidden lg:block" />
-                  In <span className="text-[#E31E24]">Dubai</span>
+                  {" "}In <span className="text-[#E31E24]">Dubai</span>
                 </h1>
 
                 <p className="text-[#E2E8F0] font-segoe-ui text-[16px] lg:text-[20px] font-normal leading-[1.5] mb-[30px] lg:mb-[40px] max-w-[600px]">
