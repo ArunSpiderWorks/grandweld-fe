@@ -79,8 +79,8 @@ export default function ContactForm() {
         <div className="w-full">
 
           <h2 className="text-[#fff] font-segoe-ui lg:text-[26px] text-[22px] font-bold uppercase leading-tight mb-[6px]">
-          Let's Discuss Your    <br />
-            <span className="text-[#E31E24]">Vessel</span> Requirements
+          Tell us your   <br />
+            <span className="text-[#E31E24]">Ship Repair</span> Requirements
           </h2>
           <p className="text-[#CBD5E1] text-[14px] mb-[24px]">
             Fill out the form and our team will get back to you shortly.
