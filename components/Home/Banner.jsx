@@ -49,40 +49,40 @@ export default function HomeBanner({ }) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:items-center w-full lg:divide-x divide-white/20 mt-[20px] gap-y-4 lg:gap-y-0">
                   <div className="flex items-center gap-[10px] lg:pr-[15px]">
                     <div className=" text-[#E31E24]">
-                      <svg className=" w-[28px] h-[28px] md:w-[24px] md:h-[24px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M9 12l2 2 4-4" /></svg>
+                      <svg className=" w-[26px] h-[26px] md:w-[24px] md:h-[24px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M9 12l2 2 4-4" /></svg>
                     </div>
                     <div>
-                      <div className="text-white font-bold text-[20px] leading-tight drop-shadow-sm whitespace-nowrap md:text-[15px]">40+</div>
+                      <div className="text-white font-bold text-[18px] leading-tight drop-shadow-sm whitespace-nowrap md:text-[15px]">40+</div>
                       <div className="text-[#CBD5E1] text-[16px] whitespace-nowrap md:text-[12px] drop-shadow-sm">Years Experience</div>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-[10px] lg:px-[15px]">
                     <div className="text-[#E31E24]">
-                      <svg className=" w-[28px] h-[28px] md:w-[24px] md:h-[24px]" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                      <svg className=" w-[26px] h-[26px] md:w-[24px] md:h-[24px]" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
                     </div>
                     <div>
-                      <div className="text-white font-bold text-[20px] leading-tight drop-shadow-sm whitespace-nowrap md:text-[15px]">24/7</div>
+                      <div className="text-white font-bold text-[18px] leading-tight drop-shadow-sm whitespace-nowrap md:text-[15px]">24/7</div>
                       <div className="text-[#CBD5E1] text-[16px] whitespace-nowrap md:text-[12px] drop-shadow-sm">Emergency Support</div>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-[10px] lg:px-[15px]">
                     <div className="text-[#E31E24]">
-                      <svg className=" w-[28px] h-[28px] md:w-[24px] md:h-[24px]" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
+                      <svg className=" w-[26px] h-[26px] md:w-[24px] md:h-[24px]" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
                     </div>
                     <div>
-                      <div className="text-white font-bold text-[20px] leading-tight drop-shadow-sm whitespace-nowrap md:text-[15px]">Dubai Maritime City</div>
+                      <div className="text-white font-bold text-[18px] leading-tight drop-shadow-sm whitespace-nowrap md:text-[15px]">Dubai Maritime City</div>
                       <div className="text-[#CBD5E1] text-[16px] whitespace-nowrap md:text-[12px] drop-shadow-sm">Strategic Location</div>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-[10px] lg:pl-[15px]">
                     <div className="text-[#E31E24]">
-                      <svg className=" w-[28px] h-[28px] md:w-[24px] md:h-[24px]" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                      <svg className=" w-[26px] h-[26px] md:w-[24px] md:h-[24px]" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
                     </div>
                     <div>
-                      <div className="text-white font-bold text-[20px] leading-tight drop-shadow-sm whitespace-nowrap md:text-[15px]">Trusted By</div>
+                      <div className="text-white font-bold text-[18px] leading-tight drop-shadow-sm whitespace-nowrap md:text-[15px]">Trusted By</div>
                       <div className="text-[#CBD5E1] text-[16px] whitespace-nowrap md:text-[12px] drop-shadow-sm">Global Operators</div>
                     </div>
                   </div>
