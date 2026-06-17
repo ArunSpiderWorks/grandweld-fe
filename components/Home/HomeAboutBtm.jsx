@@ -64,9 +64,9 @@ export default function HomeAboutBtm() {
               <ButtonRound
                 text="Enquire Now"
                 onClick={() => setIsModalOpen(true)}
-                className="text-[14px] capitalize flex items-center justify-between w-full mt-6 text-[#000] border border-[#EEE] bg-[#fff] hover:bg-[#000] text-[#050505] hover:text-[#fff] w-full "
+                className="text-[14px] capitalize flex items-center justify-between w-full mt-6 text-[#fff] border border-[#EEE] bg-[#000] hover:bg-[#fff] text-[#050505] hover:text-[#000] w-full "
                 arrow={
-                  <span className="text-white w-[18px] h-[18px] rounded-[50%] bg-[#fff] flex items-center justify-center">
+                  <span className="text-[#fff] w-[18px] h-[18px] rounded-[50%] bg-[#fff] flex items-center justify-center">
                     <BtnLinkArrow />
                   </span>
                 }

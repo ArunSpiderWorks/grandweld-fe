@@ -79,8 +79,8 @@ export default function ContactForm() {
         <div className="w-full">
 
           <h2 className="text-[#fff] font-segoe-ui lg:text-[26px] text-[22px] font-bold uppercase leading-tight mb-[6px]">
-            TELL US YOUR <br />
-            <span className="text-[#E31E24]">VESSEL</span> REQUIREMENT
+          Let's Discuss Your    <br />
+            <span className="text-[#E31E24]">Vessel</span> Requirements
           </h2>
           <p className="text-[#CBD5E1] text-[14px] mb-[24px]">
             Fill out the form and our team will get back to you shortly.
@@ -103,7 +103,11 @@ export default function ContactForm() {
               >
                 <option value="" disabled hidden>Choose Categories</option>
                 <option value="ship-repair">Ship Repair</option>
+                <option value="dry-docking">Drydocking</option>
+                <option value="technical-inspection">Technical Inspection</option>
+                <option value="other-service-enquiry">Other Service Enquiry</option>
                 <option value="job-enquiry">Job Enquiry</option>
+
               </select>
               <div className="pointer-events-none absolute inset-y-0 right-[15px] flex items-center text-gray-500">
                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,9 +130,9 @@ export default function ContactForm() {
               </div>
               <input
                 {...register("company", {
-                  required: "Company name is required",
+                  required: "name is required",
                 })}
-                placeholder="Company Name"
+                placeholder="Name"
                 className="w-full border-none py-[12px] pl-[45px] pr-[20px] bg-[#fff] rounded-[8px] text-[#000] font-medium text-[15px] focus:outline-none focus:ring-2 focus:ring-[#E31E24] placeholder:font-normal"
               />
             </div>
@@ -227,7 +231,7 @@ export default function ContactForm() {
           disabled={loading}
           className="w-full bg-[#E31E24] hover:bg-red-700 text-white text-[16px] font-bold uppercase py-[12px] rounded-[8px] flex items-center justify-center relative transition-colors duration-300 shadow-md"
         >
-          {loading ? "Submitting..." : "Request Repair Quote"}
+          {loading ? "Submitting..." : "Talk to Ship Expert"}
           {!loading && (
             <span className="absolute right-[12px] w-[26px] h-[26px] rounded-full bg-white flex items-center justify-center text-[#E31E24]">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>

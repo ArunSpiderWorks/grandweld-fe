@@ -29,7 +29,7 @@ export default function HomeBanner({ }) {
                   <div className="absolute right-0 top-1/2 translate-x-full w-[20px] lg:w-[40px] h-[1px] bg-[#E31E24]"></div>
                   <div className="bg-[#fff]/90 px-[10px] lg:px-[15px] py-[4px] lg:py-[6px] rounded-[14px] border border-[#E31E24]/90">
                     <span className="text-[#000000ff] text-[11px] lg:text-[13px] font-semibold tracking-widest uppercase">
-                      SHIP REPAIR & MAINTENANCE EXPERTS
+                      No.1 SHIP REPAIR & MAINTENANCE EXPERTS
                     </span>
                   </div>
                 </div>
