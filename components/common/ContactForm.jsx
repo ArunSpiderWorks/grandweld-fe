@@ -42,19 +42,18 @@ export default function ContactForm() {
     setLoading(true);
 
     try {
-      await axios.post("https://console.omnisellcrm.com/api/leads", {
-        orgid: "G-NSK4B",
-        branchid: "ffe9a450-7343-4a64-827f-b7686da5655f",
-        name: data.company,
-        company: data.company,
-        email: data.email,
-        phone_number: `+${data.phone}`,
-        note: data.message,
-        extra_data: {
+      await axios.post(
+        "https://api.nexus.spiderworks.org/api/save_lead?client_token=8e342918-da29-4521-a470-feb944803c9c&form_id=33c25dd3-cd5e-4e12-92b8-9e93999e4083",
+        {
+          name: data.company,
+          company: data.company,
+          email: data.email,
+          phone: `+${data.phone}`,
+          message: data.message,
+          enquiryType: data.enquiryType,
           source: "Website Contact Form",
-          category: data.enquiryType,
-        },
-      });
+        }
+      );
 
       reset();
       router.push("/thank-you");
