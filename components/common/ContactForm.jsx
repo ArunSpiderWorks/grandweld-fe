@@ -30,6 +30,8 @@ export default function ContactForm() {
     try {
       const urlParams = new URLSearchParams(window.location.search);
       const utmSource = urlParams.get("utm_source");
+      const utmMedium = urlParams.get("utm_medium");
+      const utmCampaign = urlParams.get("utm_campaign");
 
       const sanitizedPhone = data.phone ? data.phone.replace('+', '') : '';
       const payload = {
@@ -57,6 +59,14 @@ export default function ContactForm() {
       if (utmSource) {
         payload.utm_source = utmSource;
         payload.extra_data.utm_source = utmSource;
+      }
+      if (utmMedium) {
+        payload.utm_medium = utmMedium;
+        payload.extra_data.utm_medium = utmMedium;
+      }
+      if (utmCampaign) {
+        payload.utm_campaign = utmCampaign;
+        payload.extra_data.utm_campaign = utmCampaign;
       }
 
    
