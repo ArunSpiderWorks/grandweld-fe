@@ -50,9 +50,19 @@ export default function ContactForm() {
         company: data.company,
         email: data.email,
         phone: `+${data.phone}`,
+        phone_number: `+${data.phone}`,
         message: data.message,
+        note: data.message,
         enquiryType: data.enquiryType,
+        enquiry_type: data.enquiryType,
+        service: data.enquiryType,
+        category: data.enquiryType,
         source: "Website Contact Form",
+        extra_data: {
+          source: "Website Contact Form",
+          category: data.enquiryType,
+          service: data.enquiryType,
+        }
       };
 
       if (utmSource) {
