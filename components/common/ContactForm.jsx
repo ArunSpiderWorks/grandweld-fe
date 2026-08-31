@@ -42,17 +42,26 @@ export default function ContactForm() {
     setLoading(true);
 
     try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const utmSource = urlParams.get("utm_source");
+      
+      const payload = {
+        name: data.company,
+        company: data.company,
+        email: data.email,
+        phone: `+${data.phone}`,
+        message: data.message,
+        enquiryType: data.enquiryType,
+        source: "Website Contact Form",
+      };
+
+      if (utmSource) {
+        payload.utm_source = utmSource;
+      }
+
       await axios.post(
         "https://api.nexus.spiderworks.org/api/save_lead?client_token=8e342918-da29-4521-a470-feb944803c9c&form_id=33c25dd3-cd5e-4e12-92b8-9e93999e4083",
-        {
-          name: data.company,
-          company: data.company,
-          email: data.email,
-          phone: `+${data.phone}`,
-          message: data.message,
-          enquiryType: data.enquiryType,
-          source: "Website Contact Form",
-        }
+        payload
       );
 
       reset();
